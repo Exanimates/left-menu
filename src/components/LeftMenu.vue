@@ -1,12 +1,12 @@
 <template>
   <div class="menu">
     <div class="menu__header">
-      <span>CELLFRAME</span>
+      <img src="../assets/cellframe-logo.svg">
     </div>
     <div class="menu__items">
       <template :key="item.id" v-for="(item, index) in items">
         <div class="menu__item" :class="{ insert: index + 1 === activeItem }" @click="activeItem = index + 1">
-          <img class="menu__image" :src="item.icon">
+          <img class="menu__image" :src="getImgUrl(item.icon)">
           <div class="menu__title">{{ item.text }}</div>
         </div>
       </template>
@@ -22,6 +22,10 @@ export default class LeftMenu extends Vue.with(class {
   items = prop<MenuItem[]>({ type: Array, required: true, default: () => [] })
 }) {
   activeItem = 1
+
+  getImgUrl(img: string) {
+    return require('../assets/navigation/' + img + '.svg')
+  }
 }
 </script>
 
@@ -40,8 +44,11 @@ export default class LeftMenu extends Vue.with(class {
     &__header {
       height: 50px;
       display: flex;
-      justify-content: center;
+      justify-content: left;
       align-items: center;
+
+      padding-top: 10px;
+      padding-left: 15px;
       
       color: #FFFFFF;
     }
@@ -53,11 +60,22 @@ export default class LeftMenu extends Vue.with(class {
       justify-content: space-around;
     }
     &__item {
+      display: flex;
+      align-items: center;
+
       height: 52px;
       cursor: pointer;
       color: #FFFFFF;
       background: #2E3138;
       border-radius: 0px 16px 16px 0px;
+    }
+
+    &__image {
+      margin-left: 28px;
+    }
+
+    &__title {
+      margin-left: 20px;
     }
 }
 

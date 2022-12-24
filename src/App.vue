@@ -15,57 +15,57 @@ export default class App extends Vue {
   items = [{
     id: 1,
     text: 'Wallet',
-    icon: '' 
+    icon: 'Wallet' 
   },
   {
     id: 2,
     text: 'DEX',
-    icon: '' 
+    icon: 'DEX' 
   },
   {
     id: 3,
     text: 'TX explorer',
-    icon: '' 
+    icon: 'TX Explorer' 
   },
   {
     id: 4,
     text: 'Certificates',
-    icon: '' 
+    icon: 'Certificates' 
   },
   {
     id: 5,
     text: 'Tokens',
-    icon: '' 
+    icon: 'Tokens' 
   },
   {
     id: 6,
     text: 'VPN client',
-    icon: '' 
+    icon: 'VPN client' 
   },
   {
     id: 7,
     text: 'VPN service',
-    icon: '' 
+    icon: 'VPN service' 
   },
   {
     id: 8,
     text: 'Console',
-    icon: '' 
+    icon: 'Console' 
   },
   {
     id: 9,
     text: 'Logs',
-    icon: '' 
+    icon: 'Logs' 
   },
   {
     id: 10,
     text: 'Settings',
-    icon: '' 
+    icon: 'Settings' 
   },
   {
     id: 11,
     text: 'dApps',
-    icon: '' 
+    icon: 'dApps' 
   }]
 }
 </script>
