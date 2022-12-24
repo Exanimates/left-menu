@@ -24,7 +24,7 @@ export default class LeftMenu extends Vue.with(class {
   activeItem = 1
 
   getImgUrl(img: string) {
-    return require('../assets/navigation/' + img + '.svg')
+    return img ? require('../assets/navigation/' + img + '.svg') : '';
   }
 }
 </script>
